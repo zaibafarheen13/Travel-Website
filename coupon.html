@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --image:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=67c66b04-d28d-599e-a003-8323bafa7d31&637527978504464951');
+}
+
+html {
+  display:grid;
+  place-items:center;
+  min-height:98vh;
+  font-family:'Quicksand',sans-serif;
+  background:
+    url('https://mms.aimdatabase.com/Images/Dealer01/Global/PalmBranches-BG-620.png'),    
+    url("https://www.transparenttextures.com/patterns/sandpaper.png"), Burlywood;
+  background-repeat:repeat-x, repeat;
+  background-size:25% auto, auto auto;
+  overflow-x:hidden;
+}
+body {
+  width:100%;
+  margin:0;
+  padding:0;
+}
+
+#wave {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  font-size:0;
+  z-index:1;
+  transform:translateY(100%);
+}
+#wave svg {
+  filter:drop-shadow(0 -25px rgba(255,255,255,.25));
+}
+#wave div {
+  width:100%;
+  height:100%;
+  background:#0099ff;
+  transform:translateY(-10px);
+}
+
+.run_wave {
+  animation:wave 3s ease-out forwards;
+}
+.run_wave svg {
+  animation:wavy 1.5s linear infinite;
+}
+@keyframes wavy {
+  50% { transform:scaleX(2); }
+}
+
+@keyframes wave {
+  50% { transform:translateY(0%); }
+}
+
+/* sandy-text */
+#sandy_text {  
+  position:relative;
+  display:none;  
+  height:300px;
+}
+@keyframes sandy {
+  0% { opacity:0; }
+}
+.text1, .text2 {
+  width:100%;
+  position:absolute;
+  left:0;
+  top:0;
+  font-family:'Quicksand', sans-serif;
+  font-size:150px;  
+  line-height:90%;
+  font-weight:900;
+  text-align:center;
+  margin:0 auto;
+  animation:sandy 1.5s linear forwards;
+}
+#sandy_text .text1 span, #sandy_text .text2 span {
+  display:block;
+  font-size:100px;
+  line-height:100%;
+}
+#sandy_text .text1 {
+  color:transparent;
+  text-shadow:
+    10px 10px 5px peru,
+    -10px -10px 5px white;
+  filter:blur(1px);
+  opacity:.25;
+}
+#sandy_text .text2 {
+  background-color: peru;
+  background-image:url('https://www.transparenttextures.com/patterns/sandpaper.png');
+  color: transparent;
+  text-shadow: 3px 3px 4px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
+/* sandy text end*/
+
+#console_contain {
+  width:100%;
+  display:none;
+}
+#console {
+  width:100%;
+  max-width:1000px;
+  height:300px;
+  text-align:center;
+  font-size:0;
+/*   overflow:hidden; */
+  box-sizing:border-box;
+  border-radius:5px;
+  cursor:pointer;
+  position:relative;
+  margin:0 auto;
+}
+
+#find_me {
+  width:fit-content;
+  text-align:center;
+  padding:20px;
+  margin:20px auto;
+  box-sizing:border-box;
+  background:rgba(255,255,255,.25);
+  border-radius:5px;
+}
+
+.find_item, .game_block {
+  background:var(--image);
+  background-size:360px 360px;
+  display:inline-block;
+  position:relative;
+  border-radius:50%;
+}
+.game_block {  
+  opacity:0;
+  animation:fade-in 1s linear forwards;
+}
+@keyframes fade-in {
+  100% { opacity:1; }
+}
+
+.game_block:hover {
+}
+
+.found {
+}
+
+.found:after {
+  content:'\2713';
+  font-size:28px;
+  font-weight:900;
+  line-height:50px;
+  color:white;
+  width:50px;
+  height:50px;  
+  border-radius:50%;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform-origin:center center;
+  transform:scale(.75) translate(-60%,-60%);
+  background:limegreen;
+  box-shadow:0 0 5px black;
+  box-sizing:border-box;
+}
+
+#something_amazing {
+  padding: 20px;
+  box-sizing:border-box;
+  color: white;
+  width: fit-content;
+  margin: 50px auto;
+  text-align: center;
+  transition: 1s;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  position:relative;
+}
+.show_something_amazing {
+  display:block !important;
+  pointer-events:auto !important;
+  animation:show_awesome 1s linear forwards !important;
+}
+@keyframes show_awesome {
+  100% { opacity:1; }
+}
+
+/* offer styles */
+.sh-offer {
+  width:95%;
+  max-width:600px;
+  min-height:auto;
+  margin:50px auto;
+  position:relative;
+  box-shadow: 
+    -1px 2px 0px #630,
+    -2px 4px 0px #630,
+    -3px 6px 0px #630,
+    -4px 8px 0px #630,
+    -5px 10px 0px #630;
+  background-color: #630;
+  background-image: url(https://www.transparenttextures.com/patterns/tileable-wood-colored.png);
+  background-blend-mode: hard-light;
+  transform: rotate(-2deg);
+}
+
+.sh-offer:nth-child(even) {
+  transform:rotate(2deg);
+}
+
+.offerBlock {
+  box-sizing:border-box;
+  padding:30px;
+}
+
+#si-offer {
+  text-align:center;
+  border-radius:25px;
+}
+
+.si-offer-inner {
+  width:100%;
+  padding:10px 0px;
+  text-align:center;
+  font-weight:400;
+  color:var(--colorAccent);
+}
+
+#si-price {
+  font-size:55px;
+  line-height:36px;
+  font-weight:600;
+}
+#si-info {
+  font-size:18px;
+  padding-bottom:40px;
+}
+#si-btn {
+  width:100%;
+  max-width:350px;
+  margin:0 auto;
+  background:white;
+  color:saddleBrown !important;
+  color:#444;
+  border:2px solid var(--colorAccent);
+  text-transform:uppercase;
+  font-weight:600;
+  letter-spacing:2px;
+  padding:0px;
+  transition:.25s;
+  position:relative;  
+}
+
+/* #si-btn:hover {
+  transform:scale(.98);
+} */
+
+#si-btn a {
+  color:inherit;
+  text-decoration:none;
+  display:block;
+  padding:20px 0px;
+}
+#si-disc {
+  padding-top:20px;
+  padding-bottom:0;
+  font-size:10px;
+}
+    </style>
+    <title>WAP</title>
+</head>
+<body>
+    <div id='wave' class=''>
+        <svg class='svg-2' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#0099ff" fill-opacity="1" d="M0,256L24,250.7C48,245,96,235,144,224C192,213,240,203,288,176C336,149,384,107,432,112C480,117,528,171,576,186.7C624,203,672,181,720,170.7C768,160,816,160,864,160C912,160,960,160,1008,176C1056,192,1104,224,1152,229.3C1200,235,1248,213,1296,213.3C1344,213,1392,235,1416,245.3L1440,256L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path>
+        </svg>
+        <div>    
+        </div>  
+      </div>
+      
+      <div id='sandy_text' class='show_something_amazing'>
+        <div class='text1'>SUMMER <span>SAVINGS</span></div>
+        <div class='text2'>SUMMER <span>SAVINGS</span></div>
+      </div>
+      
+      <div id='console_contain'>  
+        <div id="console"></div>
+        <div id="find_me">Find these to get something amazing.<br>
+          <div class="find_item"></div>
+          <div class="find_item"></div>
+          <div class="find_item"></div>
+        </div>
+      </div>
+      <div id="something_amazing">
+        <!--   offer one -->
+        <div id="" class="sh-offer">
+          <div class="offerBlock">
+            <div id="si-offer">
+              <div id="si-price" class="si-offer-inner">$400</div>
+              <div id="si-info" class="si-offer-inner">Towards Cannon Beach, Oregon</div>
+              <div id="si-btn" class="si-offer-inner">
+                <a href="#">Get This Deal Now</a>
+              </div>
+              <div id="si-disc" class="si-offer-inner">Present upon arrival. No cash value. Not available with some other offers. Not all vehicles will qualify. A visual inspection of your vehicle is required to assess its value. Deductions will be made for wear and tear, reconditioning, previous body damage, and excessive mileage. See dealer for details. Expires [Date].</div>
+            </div>
+          </div>
+        </div>
+        <!--   offer one end-->
+        <!--   offer two -->
+        <div id="" class="sh-offer">
+          <div class="offerBlock">
+            <div id="si-offer">
+              <div id="si-price" class="si-offer-inner">$450</div>
+              <div id="si-info" class="si-offer-inner">Towards Bai Dam Trau, Vietnam</div>
+              <div id="si-btn" class="si-offer-inner">
+                <a href="#">Get This Deal Now</a>
+              </div>
+              <div id="si-disc" class="si-offer-inner">Present upon arrival. No cash value. Not available with some other offers. Not all vehicles will qualify. A visual inspection of your vehicle is required to assess its value. Deductions will be made for wear and tear, reconditioning, previous body damage, and excessive mileage. See dealer for details. Expires [Date].</div>
+            </div>
+          </div>
+        </div>
+        <!--   offer two end-->
+        <!--   offer three -->
+        <div id="" class="sh-offer">
+          <div class="offerBlock">
+            <div id="si-offer">
+              <div id="si-price" class="si-offer-inner">$X,XXX</div>
+              <div id="si-info" class="si-offer-inner">Towards Your Trade</div>
+              <div id="si-btn" class="si-offer-inner">
+                <a href="#">Get This Deal Now</a>
+              </div>
+              <div id="si-disc" class="si-offer-inner">Present upon arrival. No cash value. Not available with some other offers. Not all vehicles will qualify. A visual inspection of your vehicle is required to assess its value. Deductions will be made for wear and tear, reconditioning, previous body damage, and excessive mileage. See dealer for details. Expires [Date].</div>
+            </div>
+          </div>
+        </div>
+        <!--   offer three end-->
+      
+      </div>
+      <script>
+        const game_console = document.querySelector("#console")
+const console_contain = document.querySelector("#console_contain")
+const something_amazing = document.querySelector("#something_amazing")
+const wave = document.querySelector("#wave")
+const sandy_text = document.querySelector("#sandy_text")
+const find_item = document.querySelectorAll(".find_item")
+const tile_size = 72
+const num_hidden_items = 3
+var slide = 1
+
+const game_deets = game_console.getBoundingClientRect()
+
+function setUpGame(){  
+  var total_num_blocks = window.innerWidth < 1000 ? 16 : 30;
+  game_console.innerHTML = ''
+  find_item.forEach(function(elm){
+    elm.className = 'find_item'
+  })
+  var hidden_items = []
+  function itemsToFind(){
+    for(var i=0;i<num_hidden_items;i++) {
+      var x = Math.floor(Math.random()*5)
+      var y = Math.floor(Math.random()*4)+1
+      hidden_items.push(x*tile_size+'px '+ y*tile_size+'px')
+    }
+    console.log(hidden_items)
+    for(var i=0;i<num_hidden_items;i++) {
+      find_item[i].style.width = tile_size+'px'
+      find_item[i].style.height = tile_size+'px'
+      find_item[i].style.backgroundPosition = hidden_items[i]
+      find_item[i].classList.add('find'+i)      
+    }
+  }
+  itemsToFind()
+
+  function addGameBlock() {
+    var b = document.createElement('div')
+    b.className = 'game_block'
+    b.style.width = tile_size+'px'
+    b.style.height = tile_size+'px'
+    var x = Math.floor(Math.random()*5)
+    var y = Math.floor(Math.random()*5)
+    var avoid = x*tile_size+'px '+ y*tile_size+'px'
+    if(hidden_items.includes(avoid)) {
+      b.style.backgroundPosition = Math.random() < .5 ? '0px 0px' : tile_size+'px 0px';
+    } else {
+      b.style.backgroundPosition = avoid;
+    }  
+    var rot = Math.random()*45
+    b.style.transform = Math.random() < .5 ? 'rotate('+rot+'deg)' : 'rotate('+rot*(-1)+'deg)'; 
+    b.style.animationDelay = Math.random()*3+'s'
+
+    // place items anywhere in container
+    if(window.innerWidth < 375) {
+      game_console.appendChild(b)  
+    } else {
+      b.style.position = 'absolute'
+      b.style.left = Math.random()*90+'%'
+      b.style.top = Math.random()*90+'%'  
+      game_console.appendChild(b)
+    }   
+  }
+
+  for(var i=0;i<total_num_blocks;i++) {
+    addGameBlock()
+  }
+
+  var items = document.querySelectorAll('.game_block')
+  for(var i=0;i<num_hidden_items;i++) {
+    var item_to_find = Math.floor(Math.random()*items.length)
+    if(items[item_to_find].classList == 'game_block') {
+      items[item_to_find].classList.add('find'+i)  
+      items[item_to_find].style.zIndex = 9
+    } else {
+      var item_to_find = Math.floor(Math.random()*items.length)
+      items[item_to_find].classList.add('find'+i)  
+      items[item_to_find].style.zIndex = 9
+    }
+    items[item_to_find].style.backgroundPosition = hidden_items[i]
+    items[item_to_find].onclick = function(){
+      this.style.backgroundColor = 'rgba(0,255,0,.25)'
+      this.style.pointerEvents = 'none'
+      console.log(this.classList[1])
+      var name = this.classList[1]
+      document.getElementsByClassName(name)[1].classList.add('found')
+
+      if(document.querySelectorAll('.found').length == num_hidden_items) {
+        run_wave()        
+      }
+    }
+  }
+}
+
+function run_wave(){
+  if(document.querySelector('.run_wave')){
+    wave.classList.toggle('run_wave')
+  } else {
+    wave.classList.toggle('run_wave')
+    setTimeout(function(){
+      if(slide == 1) {
+        setUpGame()
+        sandy_text.classList.toggle('show_something_amazing')
+        console_contain.classList.toggle('show_something_amazing')
+      }
+      if(slide == 2) {
+        something_amazing.classList.toggle('show_something_amazing')
+        console_contain.classList.toggle('show_something_amazing')
+      }
+      slide++
+    }, 1500)
+    setTimeout(function(){
+      wave.classList.toggle('run_wave')
+    },3100)
+  }  
+}
+
+setTimeout(run_wave,3000)
+      </script>
+</body>
+</html>

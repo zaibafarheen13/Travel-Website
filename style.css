@@ -1,0 +1,388 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Navbar Start */
+#navbar{
+    background: #f9f9f9;
+}
+#logo{
+    font-size: 36px;
+    font-weight: 550;
+    color: black;
+    margin-bottom: 5px;
+    font-family: Darlington Demo;
+}
+#logo span{
+    color: #00d5ff;
+    font-family: Darlington Demo;
+}
+.navbar-toggler span{
+    color: #00d5ff;
+}
+.navbar-nav{
+    margin-left: 20px;
+}
+.nav-item .nav-link{
+    font-size: 16px;
+    font-weight: 550;
+    color: black;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.5s ease;
+    font-family: 'Open Sans', sans-serif;
+}
+.nav-item .nav-link:hover{
+    background: #00d5ff;
+    color: white;
+}
+#navbar form button{
+    background: #00d5ff;
+    color: white;
+    border: none;
+}
+/* Navbar End */
+
+/* Section Book Start */
+.book{
+    background: #f9f9f9;
+    padding: 50px;
+    font-family: Darlington Demo;
+}
+.main-text h1{
+    text-align: center;
+    font-weight: 600;
+    font-size: 60px;
+}
+.main-text h1 span{
+    color: #00d5ff;
+}
+.book video{
+    border-radius: 20px;
+}
+.book .card{
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -6px black;
+    border-radius: 30px;
+}
+.book .row{
+    margin-top: 30px;
+}
+.book form input{
+    padding: 10px;
+    color: black;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -6px black;
+}
+.book form textarea{
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: 0px 5px 5px -6px black;
+    height: 200px;
+}
+.book .submit{
+    width: 160px;
+    font-size: 16px;
+    font-weight: 550;
+    background: #00d5ff;
+    color: white;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.book .submit:hover{
+    width: 170px;
+}
+@media (max-width:765px){
+    .book{
+        padding: 0;
+    }
+    .main-text h1{
+        padding: 20px;
+    }
+}
+/* Section Book End */
+
+
+
+
+
+/* Section Packages Start */
+.main-txt h1{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+}
+.main-txt h1 span{
+    color: #00d5ff;
+}
+.packages .card{
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+}
+.packages .card img{
+    border-radius: 5px;
+}
+.packages .card .card-body{
+    background: transparent;
+}
+.packages .card .card-body h3{
+    font-size: 25px;
+    font-weight: 600;
+}
+.packages .card .card-body p{
+    font-size: 15px;
+}
+.checked{
+    color: #00d5ff;
+}
+.star i{
+    font-size: 15px;
+}
+.packages .card .card-body h6{
+    font-size: 20px;
+}
+.packages .card .card-body a{
+    padding: 10px;
+    text-decoration: none;
+    background: #00d5ff;
+    color: white;
+    border-radius: 5px;
+}
+/* Section Packages End */
+
+
+
+
+/* Section Services Start */
+.services{
+    background: #f9f9f9;
+    margin-top: 50px;
+}
+.services .card{
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    border: none;
+    padding: 2%;
+    cursor: pointer;
+}
+.services .card i{
+    font-size: 80px;
+    text-align: center;
+    color: #00d5ff;
+    margin-top: 20px;
+}
+.services .card .card-body h3{
+    font-weight: 600;
+}
+.services .card .card-body{
+    text-align: center;
+}
+/* Section Services End */
+
+
+
+
+
+/* Section Gallary Start */
+.gallary{
+    margin-top: 50px;
+}
+.gallary .card{
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    cursor: pointer;
+}
+.gallary .card img{
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.gallary .card img:hover{
+    transform: scale(1.1);
+}
+/* Section Gallary End */
+
+
+
+
+/* About Start */
+.about{
+    padding: 50px;
+    margin-top: 50px;
+    background: #f9f9f9;
+}
+.about .card{
+    border-radius: 10px;
+}
+.about .card img{
+    border-radius: 10px;
+}
+.about h2{
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.about p{
+    font-weight: 500;
+}
+#about-btn{
+    width: 150px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    background: #00d5ff;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 550;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#about-btn:hover{
+    width: 170px;
+}
+@media (max-width:765px){
+    .about{
+        padding: 0;
+    }
+}
+/* About End */
+
+
+
+
+/* Footer Start */
+#footer{
+    width: 100%;
+    margin-top: 150px;
+    text-align: center;
+    background: #f9f9f9;
+}
+#footer h1{
+    font-weight: 600;
+    padding-top: 30px;
+    font-family: Darlington Demo;
+}
+#footer h1 span{
+    color: #00d5ff;
+    font-family: Darlington Demo;
+}
+.social-links i{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    background: black;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.social-links i:hover{
+    background: #00d5ff;
+}
+/* Footer End */
+
+
+h2 {
+	color: #333;
+	text-align: center;
+	text-transform: uppercase;
+    font-family: 'Noto Sans', sans-serif;
+	font-weight: bold;
+	position: relative;
+	margin: 30px 0 60px;
+}
+h2::after {
+	content: "";
+	width: 140px;
+	position: absolute;
+	margin: 0 auto;
+	height: 3px;
+	background: #00d5ff;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+    opacity: .8;
+}
+.col-center {
+	margin: 0 auto;
+	float: none !important;
+}
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+.carousel-item {
+	color: #999;
+	font-size: 14px;
+    text-align: center;
+	overflow: hidden;
+    min-height: 290px;
+}
+.carousel .item .img-box {
+	width: 135px;
+	height: 135px;
+	margin: 0 auto;
+	padding: 5px;
+	border: 1px solid #00d5ff;
+	border-radius: 50%;
+}
+.carousel .img-box img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 50%;
+}
+.carousel .testimonial {
+	padding: 30px 0 10px;
+}
+.carousel .overview {	
+	font-style: italic;
+}
+.carousel .overview b {
+	text-transform: uppercase;
+	color: #00d5ff;
+}
+.carousel .carousel-control {
+	width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+	background: none;
+}
+.carousel-control i {
+    font-size: 68px;
+	line-height: 42px;
+    position: absolute;
+    display: inline-block;
+	color: #00d5ff;
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+.carousel .carousel-indicators {
+	bottom: -40px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 1px 3px;
+	border-radius: 50%;
+}
+.carousel-indicators li {	
+	background: #00d5ff;
+	border-color: transparent;
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+.carousel-indicators li.active {	
+	background: #00d5ff;		
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+
+#more {display: none;}
